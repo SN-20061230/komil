@@ -70,7 +70,7 @@ fun DetailsScreen(navController: NavController, itemId: Int) {
                 .padding(bottom = 0.dp)
 
             ) {
-                Text(text = "Go Back")
+                Text(text = "Back")
             }
 
         }
