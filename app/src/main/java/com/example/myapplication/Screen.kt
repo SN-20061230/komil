@@ -32,6 +32,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.myapplication.Navigation.Screens
 
 @Composable
 fun HomeScreen(navController: NavController) {
@@ -59,7 +60,7 @@ fun HomeScreen(navController: NavController) {
                         painter = painterResource(id = it.imageId),
                         contentDescription = null, // Provide a meaningful description
                         modifier = Modifier.fillMaxWidth().clickable {
-                            navController.navigate("details/${it.id}")
+                            navController.navigate("${Screens.detail.route}/${it.id}")
                         }
                             .height(210.dp),
                         contentScale = ContentScale.Crop // Adjust as needed
@@ -76,7 +77,7 @@ fun HomeScreen(navController: NavController) {
 
 
                 Text(  modifier = Modifier.clickable {
-                    navController.navigate("details/${it.id}")
+                    navController.navigate("${Screens.detail.route}/${it.id}")
                 }
                     .padding(8.dp),
                     text = it.title,
